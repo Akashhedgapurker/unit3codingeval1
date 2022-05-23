@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+        font-size: 16px;
+        background-color: rgb(23, 206, 197);
+      }
+      #navbar{
+        height: 100px;
+        width: auto;
+        margin: auto;
+        background-color: rgb(146, 146, 236);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+      #navbar>button{
+        height: 30px;
+        width: 200px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      #navbar+div{
+        width: 60%;
+        background-color: aqua;
+        height: 600px;
+        text-align: center;
+        margin-left: 20%;
+        justify-content: center;
+        }
+      input{
+        width: 300px;
+        height: 40px;
+        display: block;
+        justify-items: center;
+        margin: auto;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="navbar">
+      <!--Create Show Products button here, give id as "show_products". avoid making spelling mistakes in HTML id's-->
+      <button>
+        <a href="./inventory.html">Show products</a>
+        
+      </button>
+      <button>
+        <a href="./index.html">Refresh</a>
+        
+      </button>
+
+    </div>
+    <div>
+      <h2>Add Products</h2>
+      <form id="products" onsubmit="addItems(event)" >
+      <!--Create a form here to accept product data from user, give form HTML id as "products"-->
+
+      <!--Create four inputs to accept Type, Description, price, & image-->
+      <!--give the inputs following respective id's, "type", "desc", "price","image"-->
+      <!--create a "Add Product" button to submit form, give it html id as "add_product"-->
+        <input id="type" type="text" placeholder="Type">
+        <input id="description" type="text" placeholder="Description">
+        <input id="price" type="number" placeholder="price">
+        <input id="imageURL" type="url" placeholder="Image URL">
+        <input type="submit" id="submit" >
+      </form>
+    </div>
+  </body>
+</html>
+
+<script src="./scripts/index.js"></script>
